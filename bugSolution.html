@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+
+  <script>
+    // Correct approach: Create a paragraph element using createElement and appendChild for better DOM manipulation and security
+    const newParagraph = document.createElement("p");
+    const textNode = document.createTextNode("This is a paragraph created correctly.");
+    newParagraph.appendChild(textNode);
+    document.getElementById("myDiv").appendChild(newParagraph);
+
+  </script>
+</body>
+</html>
